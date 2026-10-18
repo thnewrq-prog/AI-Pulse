@@ -1,158 +1,183 @@
+<div align="center">
+
 # AI Pulse
 
-**A Chrome and Edge extension that brings your AI usage and remaining credits into one dashboard.**
+### Your AI usage. One clear view.
 
-Sign in on each service’s official website, then refresh AI Pulse to check the available usage information.
+Track usage limits, remaining credits, and Fast GPU time across your AI services.
 
-## Supported Services
+**Chrome & Edge 118+** · **7 services** · **v1.6.1**
 
-| Service | Information |
-|---|---|
-| Google Gemini | Usage percentages and limits shown on the official website |
-| Claude | Session and weekly usage shown on the official website |
-| ChatGPT | Usage percentages and limits available on the official website |
-| ComfyUI Cloud | Remaining credits |
-| Midjourney | Included and purchased/awarded Fast time |
-| Suno | Remaining credits |
-| Higgsfield | Remaining credits |
+[**Download v1.6.1 ↓**](./AI-Pulse-v1.6.1.zip?raw=true) · [Installation](#installation) · [Features](#features) · [한국어 안내](#korean-guide)
 
-Available information varies by service and account. AI Pulse does not track API token usage or API billing.
+</div>
+
+---
+
+## Overview
+
+Switching between account pages to check your AI limits takes time. **AI Pulse brings those checks into a compact toolbar popup and a customizable dashboard.**
+
+Sign in on each service's official website, refresh AI Pulse, and see the latest available usage or balance with its last checked time.
+
+> **Current status:** v1.6.1 is an experimental release. Simulated and reproduced-screen tests have passed; successful operation across all services and real accounts has not been verified. The interface is primarily in Korean.
+
+## Contents
+
+- [Features](#features)
+- [Supported services](#supported-services)
+- [Installation](#installation)
+- [Quick start](#quick-start)
+- [Updating](#updating)
+- [Privacy & permissions](#privacy--permissions)
+- [Troubleshooting](#troubleshooting)
+- [한국어 안내](#korean-guide)
 
 ## Features
 
-- **Quick-view popup** — Check service usage from the extension icon.
-- **Refresh all or individually** — Refresh All starts automatically after a 1.5-second notice.
-- **Concurrent checks** — Check all connected, visible services at once.
-- **Background checks** — Run checks without switching focus away from your work.
-- **Customizable dashboard** — Reorder cards and hide or show services.
-- **Local storage** — Keep connection settings, dashboard preferences, results, and history in your browser.
-- **Dark theme** — Black backgrounds with neon green accents.
+| Feature | What it does |
+| :--- | :--- |
+| **Quick-view popup** | View service usage directly from the extension icon. |
+| **Full dashboard** | See usage, remaining balances, and refresh history in one place. |
+| **One-click refresh** | Refresh all connected, visible services after a 1.5-second notice, or refresh a service individually. |
+| **Concurrent checks** | Check your selected services together, without a fixed batch size. |
+| **Background checks** | Use minimized lookup windows without requesting focus on your work window. |
+| **Your layout** | Reorder service cards and hide or restore services. |
+| **Local preferences** | Keep settings, results, and history in your browser. |
+| **Dark theme** | Black surfaces, white text, and neon green accents. |
+
+## Supported services
+
+| Usage limits | Information available on the official website |
+| :--- | :--- |
+| **Google Gemini** | Usage percentages and limits |
+| **Claude** | Session and weekly usage |
+| **ChatGPT** | Available usage percentages and limits |
+
+| Credits & time | Balance |
+| :--- | :--- |
+| **ComfyUI Cloud** | Remaining credits |
+| **Midjourney** | Included and purchased/awarded Fast time |
+| **Suno** | Remaining credits |
+| **Higgsfield** | Remaining credits |
+
+Information varies by account and service. Values are **snapshots from the last refresh**, not a continuously updating live feed. AI Pulse does not track API token usage or API billing, and it does not combine unrelated limits or balances.
 
 ## Installation
 
-Requires **Chrome or Edge 118 or later**.
+**Requirements:** Chrome or Microsoft Edge **118 or later**, with Developer mode enabled.
 
-1. Select **Code → Download ZIP** in this repository and extract the archive.
-2. Open your browser’s extension management page:
-   - Chrome: `chrome://extensions`
-   - Edge: `edge://extensions`
-3. Enable **Developer mode**.
-4. Click **Load unpacked**.
-5. Select the **AI-Pulse folder containing `manifest.json`**.
-6. Pin AI Pulse to your browser toolbar for easy access.
+1. [Download **AI-Pulse-v1.6.1.zip**](./AI-Pulse-v1.6.1.zip?raw=true) and extract it.
+2. Open your browser's extension management page:
 
-## How to Use
+   | Browser | Address |
+   | :--- | :--- |
+   | Chrome | `chrome://extensions` |
+   | Edge | `edge://extensions` |
 
-1. Click the extension icon, then **새 탭 열기** (Open in New Tab).
-2. Click **계정 연결** (Connect Account) for a service.
-3. Sign in directly on the service’s official website.
-4. Return to AI Pulse and click **전체 갱신** (Refresh All) or the service’s refresh button.
-5. Check the usage, remaining balance, and last checked time.
+3. Turn on **Developer mode** and click **Load unpacked**.
+4. Select the extracted **AI-Pulse** folder containing `manifest.json`.
+5. Review any permission prompts and pin AI Pulse to the toolbar.
 
-If your login session remains valid in the same browser profile, you can refresh again after restarting your browser or computer. Expired sessions require signing in again.
+> **Downloading the whole repository?** Extract the repository archive first, then extract the `AI-Pulse-v1.6.1.zip` inside it. Load the inner **AI-Pulse** folder, not the repository folder or the ZIP itself.
 
-> The current interface is primarily in Korean.
+## Quick start
+
+**Connect once → Sign in → Refresh → Check your results**
+
+1. Click the extension icon, then **새 탭 열기** (*Open in New Tab*).
+2. Choose **계정 연결** (*Connect Account*) for a service.
+3. Sign in directly on that service's official website.
+4. Return to AI Pulse and click **전체 갱신** (*Refresh All*).
+5. A notice appears; checks start automatically **1.5 seconds later**, with no second confirmation.
+6. View the results and last checked times in the popup or dashboard.
+
+You can continue working during checks. Keep the browser running and leave the minimized lookup windows alone; AI Pulse closes the windows it creates when each check finishes.
+
+<details>
+<summary><strong>Useful controls & login sessions</strong></summary>
+
+| Interface label | Meaning |
+| :--- | :--- |
+| 새 탭 열기 | Open the full dashboard |
+| 계정 연결 | Connect an account |
+| 전체 갱신 | Refresh all connected, visible services |
+| 화면 편집 | Reorder, hide, or restore cards |
+| 잔액 위치 지정 | Select a credit balance location |
+| 수동 화면 읽기 | Read the currently opened official page |
+
+Connection settings survive browser and computer restarts. Your service login must remain valid in the **same browser profile**. Expired sessions require signing in again.
+
+</details>
 
 ## Updating
 
-1. Download the latest version and overwrite the files in your existing **AI-Pulse folder**.
-2. Open your browser’s extension management page and click **Reload** for AI Pulse.
-3. Close and reopen the dashboard tab.
+1. Extract the new version and overwrite the files in your existing **AI-Pulse** installation folder.
+2. Open the extension management page and click **Reload** for AI Pulse.
+3. Review any new permission prompts, then close and reopen the dashboard.
 
-## Permissions and Privacy
+Keeping the same installation folder and browser profile helps preserve your existing settings.
 
-- You sign in on official service websites. AI Pulse does not collect or store passwords, cookies, or authentication tokens.
-- Connection settings and results stay in your browser. AI Pulse does not send them to a separate server.
-- The **`debugger` permission** helps keep background lookup pages active when they are covered or minimized.
-- This permission grants broad capabilities. AI Pulse uses it on automatically created lookup tabs to maintain page activity and read ComfyUI’s official balance response.
-- Your browser may display a **debugging notification** during checks. AI Pulse disconnects and closes its lookup windows when the check finishes.
+## Privacy & permissions
 
-## Limitations
+- **Official sign-in:** You log in on each service's own website. AI Pulse does not collect or store passwords, cookies, or authentication tokens.
+- **Local storage:** Connection settings, dashboard preferences, usage results, and history stay in your browser. AI Pulse does not send them to a separate server.
+- **Site access:** Permission to access a service's official pages is needed to read the available usage information.
+- **Debugger access:** The `debugger` permission grants broad browser capabilities. AI Pulse uses it on automatically created lookup tabs to maintain page activity and read ComfyUI's official workspace balance response. It does not attach to your existing work tabs.
+- **Visible browser notices:** Chrome or Edge may show a debugging notification during checks. Canceling that connection can interrupt a check. AI Pulse disconnects and closes its lookup windows afterward.
 
-- Displayed values are snapshots from the **last refresh**, not a continuously updating live feed.
-- Lookup windows are minimized and may appear in your taskbar.
-- Website changes, expired sessions, security checks, and network conditions can cause checks to fail.
-- Version 1.6.1 has passed simulated and reproduced-screen tests, but operation is not guaranteed across all services and real accounts.
-- If a check fails, open the official website and verify your login status. Credit services also support **잔액 위치 지정** (Select Balance Location), and the account connection page offers **수동 화면 읽기** (Read Current Page).
+## Troubleshooting
 
-When reporting an issue, include the **service name, extension version, and error message**.
+| Problem | Try this |
+| :--- | :--- |
+| Login or security check required | Open the official page, complete the check yourself, and refresh again. |
+| Credits are missing | Use **잔액 위치 지정** (*Select Balance Location*) on the credit service card. |
+| Automatic lookup fails | Open the official page from AI Pulse, then use **수동 화면 읽기** (*Read Current Page*) on the account connection page. |
+| Results look old | Check the last checked time and refresh the service. |
+| A lookup stops | Keep the browser running; avoid closing lookup windows or canceling the debugging connection. |
 
-|---|---|
-|---|---|
+Website changes, network conditions, browser policies, and account differences can affect collection. Minimized lookup windows may appear in your taskbar, and checks are not guaranteed to succeed on every account.
 
-# AI Pulse
+[**Report an issue →**](https://github.com/thnewrq-prog/AI-Pulse/issues) Include the service name, extension version, and error message. Remove personal information from screenshots before posting.
 
-**여러 AI 서비스의 사용량과 남은 크레딧을 한곳에서 확인하는 Chrome·Edge 확장 프로그램입니다.**
+---
 
-각 서비스의 공식 웹사이트에 로그인한 뒤, AI Pulse에서 갱신 버튼을 눌러 사용량을 확인할 수 있습니다.
+<a id="korean-guide"></a>
 
-## 지원 서비스
+<details>
+<summary><strong>🇰🇷 한국어 안내 — 소개 · 설치 · 사용 방법</strong></summary>
 
-| 서비스 | 확인 항목 |
-|---|---|
-| Google Gemini | 공식 화면에 표시되는 사용률·한도 |
-| Claude | 공식 화면에 표시되는 세션·주간 사용률 |
-| ChatGPT | 공식 화면에서 제공하는 사용률·한도 |
-| ComfyUI Cloud | 남은 크레딧 |
-| Midjourney | 구독 및 구매·지급 Fast 시간 |
-| Suno | 남은 크레딧 |
-| Higgsfield | 남은 크레딧 |
+### AI 사용량을 한곳에서
 
-※ 서비스와 계정에 따라 제공되는 항목이 다릅니다. API 토큰 사용량이나 API 청구 금액을 조회하는 프로그램은 아닙니다.
+**AI Pulse**는 Gemini·Claude·ChatGPT의 사용량과 ComfyUI Cloud·Midjourney·Suno·Higgsfield의 잔여 크레딧 또는 Fast 시간을 확인하는 Chrome·Edge 확장 프로그램입니다.
 
-## 주요 기능
+### 설치
 
-- **빠른 보기 팝업**: 확장 아이콘을 눌러 서비스별 사용량 확인
-- **전체·개별 갱신**: 전체 갱신은 안내 후 1.5초 뒤 자동 시작
-- **동시 조회**: 표시 중인 연결 서비스를 동시에 확인
-- **백그라운드 조회**: 작업 창의 포커스를 바꾸지 않고 조회 진행
-- **대시보드 편집**: 카드 순서 변경, 서비스 숨기기·다시 표시
-- **로컬 저장**: 연결 설정, 표시 순서, 조회 결과와 기록을 브라우저에 보관
-- **다크 테마**: 블랙 바탕과 네온 초록 포인트 적용
+1. 상단의 **Download v1.6.1**을 눌러 ZIP을 내려받고 압축을 풉니다.
+2. Chrome은 `chrome://extensions`, Edge는 `edge://extensions`를 엽니다.
+3. **개발자 모드 → 압축해제된 확장 프로그램 로드**를 누릅니다.
+4. `manifest.json`이 들어 있는 **AI-Pulse** 폴더를 선택합니다.
+5. 권한 안내를 확인하고 확장 아이콘을 고정합니다.
 
-## 설치 방법
+저장소 전체를 내려받았다면, 그 안의 **AI-Pulse-v1.6.1.zip도 한 번 더 압축 해제**해야 합니다.
 
-**Chrome 또는 Edge 118 이상**이 필요합니다.
+### 사용
 
-1. 저장소의 **Code → Download ZIP**을 누르고 압축을 풉니다.
-2. 브라우저에서 확장 프로그램 관리 페이지를 엽니다.
-   - Chrome: `chrome://extensions`
-   - Edge: `edge://extensions`
-3. **개발자 모드**를 켭니다.
-4. **압축해제된 확장 프로그램 로드**를 누릅니다.
-5. `manifest.json`이 들어 있는 **AI-Pulse 폴더**를 선택합니다.
-6. 도구 모음에 AI Pulse 아이콘을 고정하면 편리합니다.
+**확장 아이콘 → 새 탭 열기 → 계정 연결 → 공식 사이트 로그인 → 전체 갱신**
 
-## 사용 방법
+- 전체 갱신은 안내 후 **1.5초 뒤 자동 시작**하며, 표시 중인 연결 서비스를 동시에 확인합니다.
+- 조회 결과와 시각은 팝업 또는 대시보드에서 확인합니다.
+- **화면 편집**에서 카드 순서와 표시 여부를 바꿀 수 있습니다.
+- 같은 브라우저 프로필에서 로그인 상태가 유지되면 재시작 후에도 갱신할 수 있습니다.
 
-1. 확장 아이콘을 누르고 **새 탭 열기**로 대시보드를 엽니다.
-2. 사용할 서비스의 **계정 연결**을 누릅니다.
-3. 해당 서비스의 공식 페이지에서 직접 로그인합니다.
-4. AI Pulse로 돌아와 **전체 갱신** 또는 서비스별 **갱신**을 누릅니다.
-5. 조회가 끝나면 사용량·잔액과 조회 시각을 확인합니다.
+### 알아두세요
 
-같은 브라우저 프로필에서 로그인 상태가 유지되면, PC나 브라우저를 다시 켠 뒤에도 갱신 버튼으로 조회할 수 있습니다. 로그인 세션이 만료되면 다시 로그인해야 합니다.
+조회값은 마지막 갱신 시점의 스냅샷입니다. API 토큰·청구 금액은 조회하지 않습니다. 가려진 페이지 실행 유지와 ComfyUI 공식 잔액 응답 확인에 **디버깅 권한**을 사용하며, 브라우저에 디버깅 표시가 나타날 수 있습니다. 조회 창은 최소화되고 작업 표시줄에 나타날 수 있습니다.
 
-## 업데이트 방법
+v1.6.1은 재현·모의 검사를 거친 실험 버전이며, 모든 실제 계정에서의 성공을 보장하지 않습니다. 로그인 만료·보안 확인·사이트 변경 등으로 실패하면 공식 화면에서 상태를 확인하거나 **잔액 위치 지정 / 수동 화면 읽기**를 사용하세요.
 
-1. 새 버전의 파일을 기존 **AI-Pulse 폴더에 덮어씁니다**.
-2. 확장 프로그램 관리 페이지에서 AI Pulse의 **새로고침**을 누릅니다.
-3. 기존 대시보드 탭을 닫고 다시 엽니다.
+### 업데이트
 
-## 권한 및 개인정보
+기존 설치 폴더에 새 파일을 덮어쓴 뒤 **확장 프로그램 새로고침 → 대시보드 다시 열기**를 진행합니다.
 
-- 공식 사이트에서 로그인하며, 비밀번호·쿠키·인증 토큰을 수집하거나 저장하지 않습니다.
-- 연결 설정과 조회 결과는 이 브라우저에 저장하며, 별도 서버로 전송하지 않습니다.
-- 가려진 조회 페이지의 실행을 유지하기 위해 **디버깅 권한(`debugger`)**을 사용합니다.
-- 디버깅 권한은 광범위한 기능을 허용하지만, 이 프로그램에서는 자동 생성한 조회 탭의 실행 유지와 ComfyUI 공식 잔액 응답 확인에 사용합니다.
-- 조회 중 브라우저에 **디버깅 중** 표시가 나타날 수 있습니다. 조회가 끝나면 연결을 해제하고 조회 창을 닫습니다.
-
-## 알아두세요
-
-- 표시값은 **마지막 갱신 시점의 조회 결과**입니다. 계속 자동으로 갱신되는 실시간 수치는 아닙니다.
-- 조회 창은 최소화되며 작업 표시줄에 나타날 수 있습니다.
-- 사이트 화면 변경, 로그인 만료, 보안 확인, 네트워크 상태에 따라 조회가 실패할 수 있습니다.
-- v1.6.1은 재현·모의 검사를 거쳤지만, 모든 서비스와 실제 계정에서의 동작을 보장하지 않습니다.
-- 조회가 안 되면 공식 화면에서 로그인 상태를 확인하세요. 크레딧 서비스는 **잔액 위치 지정**, 계정 연결 화면에서는 **수동 화면 읽기**도 사용할 수 있습니다.
-
-문제를 제보할 때는 **서비스 이름, 확장 프로그램 버전, 오류 문구**를 함께 남겨 주세요.
+</details>
