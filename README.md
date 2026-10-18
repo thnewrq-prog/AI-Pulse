@@ -14,7 +14,21 @@ Track usage limits, remaining credits, and Fast GPU time across your AI services
 
 ---
 
-## Overview
+## 📑 Contents
+
+1. [💻 Overview](#overview)
+2. [🚀 Features](#features)
+3. [🤖 Supported services](#supported-services)
+4. [📦 Installation](#installation)
+5. [▶️ Quick start](#quick-start)
+6. [🔄 Updating](#updating)
+7. [🔐 Privacy & permissions](#privacy--permissions)
+8. [🛠️ Troubleshooting](#troubleshooting)
+9. [🇰🇷 한국어 안내](#korean-guide)
+
+<a id="overview"></a>
+
+## 💻 Overview
 
 Switching between account pages to check your AI limits takes time. **AI Pulse brings those checks into a compact toolbar popup and a customizable dashboard.**
 
@@ -22,31 +36,42 @@ Sign in on each service's official website, refresh AI Pulse, and see the latest
 
 > **Current status:** v1.6.1 is an experimental release. Simulated and reproduced-screen tests have passed; successful operation across all services and real accounts has not been verified. The interface is primarily in Korean.
 
-## Contents
+<a id="features"></a>
 
-- [Features](#features)
-- [Supported services](#supported-services)
-- [Installation](#installation)
-- [Quick start](#quick-start)
-- [Updating](#updating)
-- [Privacy & permissions](#privacy--permissions)
-- [Troubleshooting](#troubleshooting)
-- [한국어 안내](#korean-guide)
+## 🚀 Features
 
-## Features
+### 🧩 Quick-view popup & dashboard
 
-| Feature | What it does |
-| :--- | :--- |
-| **Quick-view popup** | View service usage directly from the extension icon. |
-| **Full dashboard** | See usage, remaining balances, and refresh history in one place. |
-| **One-click refresh** | Refresh all connected, visible services after a 1.5-second notice, or refresh a service individually. |
-| **Concurrent checks** | Check your selected services together, without a fixed batch size. |
-| **Background checks** | Use minimized lookup windows without requesting focus on your work window. |
-| **Your layout** | Reorder service cards and hide or restore services. |
-| **Local preferences** | Keep settings, results, and history in your browser. |
-| **Dark theme** | Black surfaces, white text, and neon green accents. |
+- Check service usage directly from the extension icon.
+- Open the full dashboard for balances, last checked times, and refresh history.
 
-## Supported services
+### ⚡ One-click, concurrent refresh
+
+- Refresh All starts automatically after a **1.5-second notice**, with no second confirmation.
+- Check all connected, visible services together, or refresh a service individually.
+
+### 🖥️ Background checks
+
+- Lookup windows start minimized without requesting focus on your work window.
+- AI Pulse closes the windows it creates when each check finishes. Browser and service restrictions can still cause failures.
+
+### 🎛️ A dashboard that fits your workflow
+
+- Reorder cards and hide or restore services with **화면 편집** (*Edit Layout*).
+- Hidden services are excluded from Refresh All.
+
+### 💾 Local preferences & history
+
+- Keep connection settings, dashboard layout, results, and history in your browser.
+- Reuse your setup after a restart while the same browser profile and service login sessions remain valid.
+
+### 🌙 Dark theme
+
+- Black surfaces, white text, and neon green accents make usage and balances easy to scan.
+
+<a id="supported-services"></a>
+
+## 🤖 Supported services
 
 | Usage limits | Information available on the official website |
 | :--- | :--- |
@@ -63,7 +88,9 @@ Sign in on each service's official website, refresh AI Pulse, and see the latest
 
 Information varies by account and service. Values are **snapshots from the last refresh**, not a continuously updating live feed. AI Pulse does not track API token usage or API billing, and it does not combine unrelated limits or balances.
 
-## Installation
+<a id="installation"></a>
+
+## 📦 Installation
 
 **Requirements:** Chrome or Microsoft Edge **118 or later**, with Developer mode enabled.
 
@@ -81,7 +108,9 @@ Information varies by account and service. Values are **snapshots from the last 
 
 > **Downloading the whole repository?** Extract the repository archive first, then extract the `AI-Pulse-v1.6.1.zip` inside it. Load the inner **AI-Pulse** folder, not the repository folder or the ZIP itself.
 
-## Quick start
+<a id="quick-start"></a>
+
+## ▶️ Quick start
 
 **Connect once → Sign in → Refresh → Check your results**
 
@@ -110,7 +139,9 @@ Connection settings survive browser and computer restarts. Your service login mu
 
 </details>
 
-## Updating
+<a id="updating"></a>
+
+## 🔄 Updating
 
 1. Extract the new version and overwrite the files in your existing **AI-Pulse** installation folder.
 2. Open the extension management page and click **Reload** for AI Pulse.
@@ -118,7 +149,9 @@ Connection settings survive browser and computer restarts. Your service login mu
 
 Keeping the same installation folder and browser profile helps preserve your existing settings.
 
-## Privacy & permissions
+<a id="privacy--permissions"></a>
+
+## 🔐 Privacy & permissions
 
 - **Official sign-in:** You log in on each service's own website. AI Pulse does not collect or store passwords, cookies, or authentication tokens.
 - **Local storage:** Connection settings, dashboard preferences, usage results, and history stay in your browser. AI Pulse does not send them to a separate server.
@@ -126,7 +159,9 @@ Keeping the same installation folder and browser profile helps preserve your exi
 - **Debugger access:** The `debugger` permission grants broad browser capabilities. AI Pulse uses it on automatically created lookup tabs to maintain page activity and read ComfyUI's official workspace balance response. It does not attach to your existing work tabs.
 - **Visible browser notices:** Chrome or Edge may show a debugging notification during checks. Canceling that connection can interrupt a check. AI Pulse disconnects and closes its lookup windows afterward.
 
-## Troubleshooting
+<a id="troubleshooting"></a>
+
+## 🛠️ Troubleshooting
 
 | Problem | Try this |
 | :--- | :--- |
@@ -147,11 +182,11 @@ Website changes, network conditions, browser policies, and account differences c
 <details>
 <summary><strong>🇰🇷 한국어 안내 — 소개 · 설치 · 사용 방법</strong></summary>
 
-### AI 사용량을 한곳에서
+### 💻 AI 사용량을 한곳에서
 
 **AI Pulse**는 Gemini·Claude·ChatGPT의 사용량과 ComfyUI Cloud·Midjourney·Suno·Higgsfield의 잔여 크레딧 또는 Fast 시간을 확인하는 Chrome·Edge 확장 프로그램입니다.
 
-### 설치
+### 📦 설치
 
 1. 상단의 **Download v1.6.1**을 눌러 ZIP을 내려받고 압축을 풉니다.
 2. Chrome은 `chrome://extensions`, Edge는 `edge://extensions`를 엽니다.
@@ -161,7 +196,7 @@ Website changes, network conditions, browser policies, and account differences c
 
 저장소 전체를 내려받았다면, 그 안의 **AI-Pulse-v1.6.1.zip도 한 번 더 압축 해제**해야 합니다.
 
-### 사용
+### ▶️ 사용
 
 **확장 아이콘 → 새 탭 열기 → 계정 연결 → 공식 사이트 로그인 → 전체 갱신**
 
@@ -170,13 +205,13 @@ Website changes, network conditions, browser policies, and account differences c
 - **화면 편집**에서 카드 순서와 표시 여부를 바꿀 수 있습니다.
 - 같은 브라우저 프로필에서 로그인 상태가 유지되면 재시작 후에도 갱신할 수 있습니다.
 
-### 알아두세요
+### 💡 알아두세요
 
 조회값은 마지막 갱신 시점의 스냅샷입니다. API 토큰·청구 금액은 조회하지 않습니다. 가려진 페이지 실행 유지와 ComfyUI 공식 잔액 응답 확인에 **디버깅 권한**을 사용하며, 브라우저에 디버깅 표시가 나타날 수 있습니다. 조회 창은 최소화되고 작업 표시줄에 나타날 수 있습니다.
 
 v1.6.1은 재현·모의 검사를 거친 실험 버전이며, 모든 실제 계정에서의 성공을 보장하지 않습니다. 로그인 만료·보안 확인·사이트 변경 등으로 실패하면 공식 화면에서 상태를 확인하거나 **잔액 위치 지정 / 수동 화면 읽기**를 사용하세요.
 
-### 업데이트
+### 🔄 업데이트
 
 기존 설치 폴더에 새 파일을 덮어쓴 뒤 **확장 프로그램 새로고침 → 대시보드 다시 열기**를 진행합니다.
 
