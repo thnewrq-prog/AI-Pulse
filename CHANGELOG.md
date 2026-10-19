@@ -1,5 +1,14 @@
 # AI Pulse 업데이트 기록 / Changelog
 
+## v1.13.5 — 트레이 하단 안내 수정 / Popup notice hotfix
+
+- 트레이 하단의 브라우저 응답 지연 등 상태 문구가 계속 남던 문제를 수정했습니다. 문구는 6초 뒤 사라지며 정상 응답/상태 수신 시 즉시 해제됩니다.
+- 정상 상태 메시지를 초기 읽기 응답으로 처리하여, 데이터가 도착했는데도 뒤늦게 시간 초과 안내가 뜨는 경우를 방지했습니다. 다른 명령은 실제 응답을 기다립니다.
+- 알림 해제 시 트레이 팝업 높이를 다시 계산합니다. 서비스 수집·트레이 조정·초기화 알림 일정은 변경하지 않았습니다.
+- 설치 payload 45개 중 popup.js만 교체하고 나머지 44개 파일의 원본 일치를 확인했습니다. 같은 제품이 설치돼 있으면 수정 파일 강제 복구와 설치 원본 갱신을 수행하도록 설치기를 재빌드했습니다. 버전 번호는 1.13.5를 유지합니다.
+- 원본 문제의 모의 재현, 패치 구문 검사 및 회귀 테스트 6개를 통과했습니다. 설치기와 실제 Windows 트레이는 실행하지 않았습니다.
+- Exit all tray instances and browsers, rerun the updated installer, and reload the extension. Status notices now expire after six seconds or clear on successful responses/state updates. A valid snapshot completes the initial read without leaving a false timeout. Only popup.js in the installed payload changed; the wrapper also supports repairing an existing installation. Version remains 1.13.5. Installer/tray end-to-end behavior was not exercised.
+
 ## v1.13.5 — v1.8.0 대비 누적 업데이트
 
 비교 기준: 이 저장소의 AI-Pulse-v1.8.0.zip과 사용자가 제공한 AI-Pulse-v1.13.5.zip. 설치 EXE를 실행하지 않고 내장 MSI의 실제 파일을 추출해 비교했습니다. 개별 버전 번호는 동봉된 누적 사용안내에 기록된 경우만 표시합니다.
